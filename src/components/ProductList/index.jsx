@@ -4,9 +4,13 @@ import Product from "./Product";
 
 export default function ProductList() {
   return (
-    <div className="containerProductList">
-      {/* {map } */}
+    <ul className="containerProductList">
       <Product />
-    </div>
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+    </ul>
   );
 }

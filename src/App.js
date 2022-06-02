@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Cart from "./components/Cart";
 import ProductList from "./components/ProductList";
+import Results from "./components/Results";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -20,7 +21,10 @@ function App() {
     <div className="App">
       <Header />
       <div className="container_main">
-        <ProductList />
+        <div className="sectionProducts">
+          <Results />
+          <ProductList />
+        </div>
         <Cart />
       </div>
     </div>

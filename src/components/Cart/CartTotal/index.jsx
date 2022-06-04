@@ -1,14 +1,16 @@
 import React from "react";
 import "./style.css";
 
-export default function CartTotal() {
+export default function CartTotal({ setCurrentSale, cartTotal }) {
   return (
     <div className="total">
       <div className="preco">
         <span className="preco_total_titulo">Total</span>
-        <span className="preco_total_valor">R$ 40,00</span>
+        <span className="preco_total_valor">
+          R$ {cartTotal.toFixed(2).replace(".", ",")}
+        </span>
       </div>
-      <button>Remover Todos</button>
+      <button onClick={() => setCurrentSale([])}>Remover Todos</button>
     </div>
   );
 }

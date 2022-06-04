@@ -1,11 +1,11 @@
 import React from "react";
 import "./style.css";
 
-export default function Results() {
+export default function Results({ filtro }) {
   return (
     <div className="containerResults">
       <p>
-        Resultados para: <span>Sanduíche</span>
+        Resultados para: <span>{filtro}</span>
       </p>
     </div>
   );

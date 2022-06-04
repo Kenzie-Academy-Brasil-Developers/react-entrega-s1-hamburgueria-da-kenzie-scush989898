@@ -19,12 +19,15 @@
 }
 
 .info_cart_product {
+  width: 170px;
   margin: 0;
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 .info_cart_product > h4 {
+  max-width: 180px;
   margin: 0;
   font-family: "Inter";
   font-style: normal;
@@ -32,6 +35,10 @@
   font-size: 18px;
   line-height: 24px;
   color: #333333;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .info_cart_product > h5 {
   margin: 0;

@@ -1,4 +1,3 @@
-import React from "react";
 import "./style.css";
 import CartProduct from "./CartProduct";
 import CartTotal from "./CartTotal";
@@ -17,7 +16,11 @@ export default function Cart({
   );
 
   return (
-    <div className="containerCart">
+    <div
+      className={
+        currentSale.length <= 0 ? "containerCart sacola_vazia" : "containerCart"
+      }
+    >
       <div className="titulo_carrinho">Carrinho de compras</div>
       <div className="main_cart">
         <ul className="lista_produtos_carrinho">
@@ -32,12 +35,14 @@ export default function Cart({
             );
           })}
         </ul>
-        <hr className="cart_hr" />
-
-        <CartTotal setCurrentSale={setCurrentSale} cartTotal={cartTotal} />
-        {/* SAJIJISAJISAJIKSAIJKSAIJKSAISIA */}
-        {/* SAJIJISAJISAJIKSAIJKSAIJKSAISIA */}
-        {/* <CartEmpty /> */}
+        {currentSale.length > 0 ? (
+          <>
+            <hr className="cart_hr" />
+            <CartTotal setCurrentSale={setCurrentSale} cartTotal={cartTotal} />
+          </>
+        ) : (
+          <CartEmpty />
+        )}
       </div>
     </div>
   );

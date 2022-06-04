@@ -9,6 +9,10 @@
   margin-bottom: 40px;
 }
 
+.sacola_vazia {
+  height: 300px;
+}
+
 .titulo_carrinho {
   background: #27ae60;
   border-radius: 5px 5px 0px 0px;

@@ -5,9 +5,6 @@ import Product from "./Product";
 export default function ProductList({
   products,
   filtro,
-  setFiltro,
-  filteredProducts,
-  setFilteredProducts,
   currentSale,
   setCurrentSale,
 }) {

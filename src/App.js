@@ -7,7 +7,6 @@ import Results from "./components/Results";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentSale, setCurrentSale] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
   const [filtro, setFiltro] = useState("");
@@ -24,16 +23,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header filtro={filtro} setFiltro={setFiltro} />
+      <Header setFiltro={setFiltro} />
       <div className="container_main">
         <div className="sectionProducts">
           {filtro !== "" && <Results filtro={filtro} />}
           <ProductList
             products={products}
             filtro={filtro}
-            setFiltro={setFiltro}
-            filteredProducts={filteredProducts}
-            setFilteredProducts={setFilteredProducts}
             currentSale={currentSale}
             setCurrentSale={setCurrentSale}
           />

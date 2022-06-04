@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import "./style.css";
 
-export default function InputSearch({ filtro, setFiltro }) {
+export default function InputSearch({ setFiltro }) {
   const inputRef = useRef(null);
 
   function retornaValorPesquisa(event) {
     event.preventDefault();
-    setFiltro(inputRef.current.value);
+    setFiltro(inputRef.current.value.toLowerCase());
   }
   return (
     <form className="container_Input">
